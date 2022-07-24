@@ -16,10 +16,12 @@ if [[ -n $CONFIG_ENV_URL ]]; then
   echo " Found config.env File 📁📁"
 	wget -q $CONFIG_ENV_URL -O /app/config.env
 fi
-
+if [[ -n $HOICHOI_COOKIES_URL ]]; then
+  echo " Found hoichoi.txt 🍪🍪"
+	wget -q $HOICHOI_COOKIES_URL -O /app/hoichoi.txt
+fi
 if [ -f .env ] ; then  set -o allexport; source .env; set +o allexport ; fi
 
 
 echo "Starting Your Tele-LeechX... ♻️♻️"
 python3 update.py && python3 -m tobrot
-
