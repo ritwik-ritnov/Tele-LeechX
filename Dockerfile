@@ -7,4 +7,3 @@ COPY . .
 #RUN chmod +x extract
 
 CMD ["bash","start.sh"]
-
